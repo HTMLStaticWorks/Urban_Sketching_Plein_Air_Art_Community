@@ -4,6 +4,18 @@ html[dir="rtl"] {
     text-align: right;
 }
 
+/* Ensure English text blocks preserve LTR directionality for correct punctuation and line wrapping while inheriting RTL alignment */
+html[dir="rtl"] p,
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] h4,
+html[dir="rtl"] h5,
+html[dir="rtl"] h6,
+html[dir="rtl"] blockquote {
+    direction: ltr;
+}
+
 /* Adjust Offcanvas for RTL */
 html[dir="rtl"] .offcanvas-end {
     right: auto;
@@ -26,34 +38,30 @@ html[dir="rtl"] .me-auto {
     margin-right: 0 !important;
 }
 
-/* Adjust padding/margins for specific alignments */
-html[dir="rtl"] .pe-lg-5 {
-    padding-left: 3rem !important;
-    padding-right: 0 !important;
+/* Responsive Text Alignment & Padding Overrides for RTL */
+html[dir="rtl"] .text-start { text-align: right !important; }
+html[dir="rtl"] .text-end { text-align: left !important; }
+
+@media (min-width: 576px) {
+    html[dir="rtl"] .text-sm-start { text-align: right !important; }
+    html[dir="rtl"] .text-sm-end { text-align: left !important; }
 }
 
-html[dir="rtl"] .ps-lg-4 {
-    padding-right: 1.5rem !important;
-    padding-left: 0 !important;
+@media (min-width: 768px) {
+    html[dir="rtl"] .text-md-start { text-align: right !important; }
+    html[dir="rtl"] .text-md-end { text-align: left !important; }
+    html[dir="rtl"] .justify-content-md-start { justify-content: flex-end !important; }
+    html[dir="rtl"] .justify-content-md-end { justify-content: flex-start !important; }
 }
 
-html[dir="rtl"] .text-lg-start,
-html[dir="rtl"] .text-md-start {
-    text-align: right !important;
+@media (min-width: 992px) {
+    html[dir="rtl"] .text-lg-start { text-align: right !important; }
+    html[dir="rtl"] .text-lg-end { text-align: left !important; }
+    html[dir="rtl"] .pe-lg-5 { padding-left: 3rem !important; padding-right: 0 !important; }
+    html[dir="rtl"] .pe-lg-4 { padding-left: 1.5rem !important; padding-right: 0 !important; }
+    html[dir="rtl"] .ps-lg-4 { padding-right: 1.5rem !important; padding-left: 0 !important; }
 }
 
-html[dir="rtl"] .text-lg-end,
-html[dir="rtl"] .text-md-end {
-    text-align: left !important;
-}
-
-html[dir="rtl"] .justify-content-md-start {
-    justify-content: flex-end !important;
-}
-
-html[dir="rtl"] .justify-content-md-end {
-    justify-content: flex-start !important;
-}
 
 /* Animations for RTL */
 html[dir="rtl"] .reveal-left {
@@ -61,6 +69,10 @@ html[dir="rtl"] .reveal-left {
 }
 html[dir="rtl"] .reveal-right {
     transform: translateX(-80px);
+}
+html[dir="rtl"] .reveal-left.active,
+html[dir="rtl"] .reveal-right.active {
+    transform: translate(0, 0) scale(1) !important;
 }
 
 html[dir="rtl"] .border-md-start {
@@ -85,6 +97,11 @@ html[dir="rtl"] .me-4 {
     margin-left: 1.5rem !important;
 }
 
+html[dir="rtl"] .me-2 {
+    margin-right: 0 !important;
+    margin-left: 0.5rem !important;
+}
+
 html[dir="rtl"] .ms-3 {
     margin-left: 0 !important;
     margin-right: 1rem !important;
@@ -100,3 +117,128 @@ html[dir="rtl"] .pe-3 {
     padding-right: 0 !important;
     padding-left: 1rem !important;
 }
+
+/* Footer Link Alignment for RTL */
+html[dir="rtl"] footer {
+    text-align: right !important;
+}
+
+html[dir="rtl"] footer .col-lg-3,
+html[dir="rtl"] footer .col-lg-2,
+html[dir="rtl"] footer .col-lg-4,
+html[dir="rtl"] footer .col-12 {
+    display: block !important;
+    text-align: right !important;
+}
+
+html[dir="rtl"] footer .nav {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 0 !important;
+}
+
+html[dir="rtl"] footer .nav-link {
+    text-align: right !important;
+    padding: 8px 0 !important;
+}
+
+html[dir="rtl"] footer .footer-logo {
+    justify-content: flex-start !important;
+}
+
+html[dir="rtl"] footer .d-flex.gap-3 {
+    justify-content: flex-start !important;
+}
+
+html[dir="rtl"] footer .text-center,
+html[dir="rtl"] footer .text-center p {
+    text-align: center !important;
+}
+
+html[dir="rtl"] footer p {
+    text-align: right !important;
+    direction: ltr !important;
+}
+
+/* Input-Group Corners & Text Alignment for RTL */
+html[dir="rtl"] .input-group .form-control {
+    border-top-right-radius: 50rem !important;
+    border-bottom-right-radius: 50rem !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    text-align: right !important;
+}
+
+html[dir="rtl"] .input-group .btn,
+html[dir="rtl"] .input-group .input-group-text {
+    border-top-left-radius: 50rem !important;
+    border-bottom-left-radius: 50rem !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+
+/* Accordion RTL Alignment (Dropdown left, Question right) */
+html[dir="rtl"] .accordion-button {
+    text-align: right !important;
+    flex-direction: row-reverse !important;
+    justify-content: space-between !important;
+}
+
+html[dir="rtl"] .accordion-button::after {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+html[dir="rtl"] .accordion-body {
+    text-align: right !important;
+    padding-right: 1.25rem !important;
+    padding-left: 3rem !important;
+}
+
+/* Select Dropdown RTL Positioning & Padding (Prevents Text Overlapping) */
+html[dir="rtl"] .form-select {
+    background-position: left 1.25rem center !important;
+    padding-left: 3rem !important;
+    padding-right: 1.25rem !important;
+    text-align: right !important;
+}
+
+/* Home Page & Global RTL Mobile & Tablet Center Alignment */
+@media (max-width: 1024px) {
+    html[dir="rtl"] .timeline,
+    html[dir="rtl"] .timeline .row,
+    html[dir="rtl"] .timeline [class*="col-"],
+    html[dir="rtl"] .timeline h4,
+    html[dir="rtl"] .timeline p {
+        text-align: center !important;
+        justify-content: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    html[dir="rtl"] section,
+    html[dir="rtl"] .hero,
+    html[dir="rtl"] .pe-lg-5,
+    html[dir="rtl"] .pe-lg-5 h1,
+    html[dir="rtl"] .pe-lg-5 p,
+    html[dir="rtl"] .pe-lg-5 .d-flex,
+    html[dir="rtl"] .text-center,
+    html[dir="rtl"] .text-center h1,
+    html[dir="rtl"] .text-center h2,
+    html[dir="rtl"] .text-center h3,
+    html[dir="rtl"] .text-center h4,
+    html[dir="rtl"] .text-center p {
+        text-align: center !important;
+    }
+
+    html[dir="rtl"] .pe-lg-5 .d-flex,
+    html[dir="rtl"] .d-flex.justify-content-center {
+        justify-content: center !important;
+    }
+}
+
+
+
+

@@ -568,8 +568,28 @@ footer .nav-link:hover {
     100% { box-shadow: 0 0 0 0 rgba(var(--accent-rgb), 0); }
 }
 
-@media (max-width: 767px) {
-    .timeline::before { left: 50%; transform: translateX(-50%); }
+@media (max-width: 1024px) {
+    .timeline::before { display: none !important; }
+    .timeline .row {
+        text-align: center !important;
+        justify-content: center !important;
+    }
+    .timeline .mission-step {
+        margin: 0 auto 20px auto !important;
+    }
+    .timeline [class*="col-lg-5"] {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .timeline p {
+        text-align: center !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        max-width: 550px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
 }
 
 /* Typography Spacing */
@@ -663,7 +683,7 @@ footer .d-flex.gap-3 a:hover {
     transform: translateY(-5px) scale(1.1);
 }
 
-.footer-logo, .footer-logo span {
+.footer-logo, .footer-logo span:not(.text-accent) {
     color: var(--text-main) !important;
 }
 
@@ -1013,9 +1033,9 @@ footer .d-flex.gap-3 a:hover {
         padding-right: 20px;
         gap: 40px !important;
     }
-    /* .timeline::before {
-        display: none; 
-    } */
+    .timeline::before {
+        display: none !important; 
+    }
     .mission-step {
         margin-bottom: 16px;
     }
@@ -1832,7 +1852,7 @@ body:not([data-theme="dark"]) .compare-cell {
 /* --- TACTICAL RADIO & CHECKBOX REFINEMENT --- */
 .form-check-input {
     background-color: transparent !important;
-    border: 1px solid var(--border-color) !important;
+    border: 1.5px solid var(--text-muted) !important;
     cursor: pointer;
     transition: all 0.2s ease;
 }
@@ -1945,6 +1965,13 @@ body:not([data-theme="dark"]) .compare-cell {
         align-items: center !important;
         text-align: center;
         gap: 20px;
+    }
+    .bento-card .d-flex.flex-row {
+        flex-direction: row !important;
+        align-items: center !important;
+    }
+    .bento-card .d-flex.flex-column.align-items-start {
+        align-items: flex-start !important;
     }
     .bento-card .row {
         flex-direction: column;
@@ -2379,3 +2406,182 @@ body:not([data-theme="dark"]) .compare-cell {
     transform: translateY(-10px) scale(1.02);
     box-shadow: 0 30px 60px rgba(0,0,0,0.15);
 }
+
+/* --- SUBPAGE HERO SECTION --- */
+.subpage-hero {
+    background: linear-gradient(180deg, rgba(var(--accent-rgb), 0.05) 0%, rgba(var(--bg-color), 0) 100%);
+    border-bottom: none;
+    position: relative;
+    z-index: 1;
+}
+
+/* --- PAGE SPECIFIC HERO ILLUSTRATIONS (COLORED ART SVGs) --- */
+
+/* 1. About Page: Sketchbook & City/Compass */
+.hero-about .decor-brush {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none"><rect x="15" y="20" width="70" height="60" rx="5" fill="%23FFFFFF" stroke="%2314B8A6" stroke-width="2.5"/><path d="M50 20v60M25 35h20M25 50h20M25 65h15M55 35h20M55 50h20M55 65h15" stroke="%2394A3B8" stroke-width="1.5" stroke-linecap="round"/><circle cx="20" cy="20" r="3" fill="%23FF7A59"/><circle cx="80" cy="20" r="3" fill="%23FF7A59"/><path d="M48 20c2-5 5-5 5 0" stroke="%2314B8A6" stroke-width="2"/></svg>') !important;
+}
+.hero-about .decor-pencil {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none"><circle cx="50" cy="50" r="35" stroke="%23FF7A59" stroke-width="2.5" stroke-dasharray="4 4"/><path d="M50 20v60M20 50h60M30 30l40 40M30 70l40-40" stroke="%2314B8A6" stroke-width="1.5" opacity="0.5"/><circle cx="50" cy="50" r="10" fill="%2314B8A6" opacity="0.8"/></svg>') !important;
+}
+
+/* 2. Meetups Page: Map/Pin & Easel */
+.hero-meetups .decor-brush {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none"><path d="M50 15c-15 0-25 10-25 24 0 18 25 46 25 46s25-28 25-46c0-14-10-24-25-24z" fill="%2314B8A6" fill-opacity="0.1" stroke="%2314B8A6" stroke-width="2.5"/><circle cx="50" cy="38" r="10" fill="%236366F1"/><path d="M35 85h30" stroke="%2394A3B8" stroke-width="2" stroke-linecap="round"/></svg>') !important;
+}
+.hero-meetups .decor-pencil {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none"><path d="M25 80l25-55 25 55M50 25v55" stroke="%236366F1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="20" y="45" width="60" height="20" rx="3" fill="%23FFFFFF" stroke="%2314B8A6" stroke-width="2"/><path d="M30 55h40" stroke="%23FF7A59" stroke-width="2"/></svg>') !important;
+}
+
+/* 3. Gallery Page: Picture Frame & Watercolor Palette */
+.hero-gallery .decor-brush {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none"><rect x="15" y="15" width="70" height="70" rx="8" fill="%23FFFFFF" stroke="%2314B8A6" stroke-width="3"/><rect x="25" y="25" width="50" height="50" rx="4" fill="%23FFB800" fill-opacity="0.1" stroke="%23FFB800" stroke-width="2"/><path d="M30 65l15-15 12 12 15-18 8 8" stroke="%23FFB800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="60" cy="40" r="4" fill="%2314B8A6"/></svg>') !important;
+}
+.hero-gallery .decor-pencil {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none"><path d="M25 45c0-15 15-25 35-20s40 15 30 35S55 75 40 70 25 60 25 45z" fill="%23FFFFFF" stroke="%23FFB800" stroke-width="2.5"/><circle cx="42" cy="38" r="6" fill="%2314B8A6"/><circle cx="62" cy="38" r="6" fill="%23FF7A59"/><circle cx="52" cy="55" r="6" fill="%236366F1"/><circle cx="72" cy="50" r="6" fill="%23FFB800"/><path d="M30 60l-10 15c-2 3-5 1-4-2l5-12" fill="%2394A3B8" stroke="%2394A3B8" stroke-width="2"/></svg>') !important;
+}
+
+/* 4. Supply Guide Page: Water Jar with Brushes & Ink Pot */
+.hero-pricing .decor-brush {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none"><rect x="35" y="45" width="30" height="40" rx="8" fill="%23FFFFFF" fill-opacity="0.8" stroke="%2314B8A6" stroke-width="2.5"/><path d="M40 45V25l8-8 8 8v20M45 45V15l6-6 6 6v30" stroke="%238B5CF6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M30 45h40" stroke="%2314B8A6" stroke-width="2"/><path d="M38 60c2 4 8 4 10 0" stroke="%238B5CF6" stroke-width="1.5"/></svg>') !important;
+}
+.hero-pricing .decor-pencil {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none"><path d="M35 50h30v30H35V50z" fill="%23FFFFFF" stroke="%238B5CF6" stroke-width="2.5"/><path d="M40 50V35h20v15M42 35l8-10 8 10" stroke="%2314B8A6" stroke-width="2" stroke-linecap="round"/><circle cx="50" cy="65" r="7" fill="%2314B8A6"/><path d="M25 75l10-10M75 75l-10-10" stroke="%2394A3B8" stroke-width="2" stroke-linecap="round"/></svg>') !important;
+}
+
+/* 5. Contact Page: Envelope & Chat Bubble */
+.hero-contact .decor-brush {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none"><rect x="15" y="25" width="70" height="50" rx="6" fill="%23FFFFFF" stroke="%2314B8A6" stroke-width="2.5"/><path d="M15 25l35 25 35-25" stroke="%23FF7A59" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M25 60h25M25 50h15" stroke="%2394A3B8" stroke-width="1.5" stroke-linecap="round"/></svg>') !important;
+}
+.hero-contact .decor-pencil {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none"><path d="M20 30h60v40H45L30 80V70H20V30z" fill="%23FFFFFF" stroke="%23FF7A59" stroke-width="2.5" stroke-linejoin="round"/><circle cx="38" cy="50" r="4" fill="%2314B8A6"/><circle cx="50" cy="50" r="4" fill="%2314B8A6"/><circle cx="62" cy="50" r="4" fill="%2314B8A6"/></svg>') !important;
+}
+
+/* Sketching-related background decoration */
+.subpage-hero .hero-sketch-decor {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    opacity: 0.12;
+    pointer-events: none;
+    transition: all 0.5s ease;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+[data-theme="dark"] .subpage-hero .hero-sketch-decor {
+    opacity: 0.22;
+    filter: invert(1) brightness(1.5);
+}
+
+.subpage-hero .decor-brush {
+    top: 20%;
+    left: 10%;
+    transform: rotate(-15deg);
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="%2314B8A6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M75 15l10 10-40 40c-2 2-5 3-8 3H25v-12c0-3 1-6 3-8l40-40zM25 73c1-2 4-5 8-5M15 85a8 8 0 0 1 12 0L15 85zM60 30l10 10"/></svg>');
+    animation: float-sketch-1 8s ease-in-out infinite;
+}
+
+.subpage-hero .decor-pencil {
+    bottom: 20%;
+    right: 10%;
+    transform: rotate(20deg);
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="%2314B8A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 85l15-5 50-50-10-10-50 50-5 15zM65 25l10 10M15 85l3-3M20 70l10 10M55 20c2-5 8-5 10-3l8 8c2 2 2 8-3 10L55 20z"/></svg>');
+    animation: float-sketch-2 10s ease-in-out infinite;
+}
+
+@keyframes float-sketch-1 {
+    0% { transform: translateY(0px) rotate(-15deg); }
+    50% { transform: translateY(-10px) rotate(-10deg); }
+    100% { transform: translateY(0px) rotate(-15deg); }
+}
+
+@keyframes float-sketch-2 {
+    0% { transform: translateY(0px) rotate(20deg); }
+    50% { transform: translateY(8px) rotate(25deg); }
+    100% { transform: translateY(0px) rotate(20deg); }
+}
+
+/* Beautiful Separation Line (Sketchy/Hand-drawn effect) */
+.subpage-hero .hero-separator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(var(--accent-rgb), 0.1) 15%, 
+        rgba(var(--accent-rgb), 0.6) 50%, 
+        rgba(var(--accent-rgb), 0.1) 85%, 
+        transparent 100%
+    );
+    border-radius: 50%;
+}
+
+/* Hide background decors on mobile to avoid overcrowding */
+@media (max-width: 768px) {
+    .subpage-hero .hero-sketch-decor {
+        display: none !important;
+    }
+}
+
+/* Accordion Custom Theme Styling */
+.accordion-button {
+    color: var(--text-main) !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--accent) !important;
+    background-color: transparent !important;
+}
+
+.accordion-button::after {
+    filter: brightness(0.7);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+[data-theme="dark"] .accordion-button::after {
+    filter: invert(1) brightness(2);
+}
+
+.accordion-button:not(.collapsed)::after {
+    filter: invert(0.6) sepia(1) saturate(5) hue-rotate(130deg) !important;
+}
+
+.accordion-body {
+    color: var(--text-muted) !important;
+}
+
+/* Protocol Card Heading & Sub-content Alignment */
+.protocol-card-title {
+    min-height: 3.25rem;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    line-height: 1.3;
+}
+
+/* Form Select Refinement & Dark Theme Icon */
+.form-select {
+    background-position: right 1.25rem center !important;
+    padding-right: 3rem !important;
+    padding-left: 1.25rem !important;
+}
+
+[data-theme="dark"] .form-select {
+    color: #FFFFFF !important;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important;
+}
+
+/* Safe Area Insets & Base Horizontal Padding (No Edge Touching) */
+.container,
+.container-fluid {
+    padding-left: max(1.25rem, env(safe-area-inset-left)) !important;
+    padding-right: max(1.25rem, env(safe-area-inset-right)) !important;
+}
+
+
+

@@ -1,5 +1,9 @@
+// Apply persisted direction layout immediately to prevent layout flash on refresh
+document.documentElement.dir = localStorage.getItem('dir') || 'ltr';
+
 document.addEventListener('DOMContentLoaded', () => {
     initTheme();
+    initRTL();
     initNavbar();
     initScrollReveal();
     initBackToTop();
@@ -54,7 +58,38 @@ function initNavbar() {
                 if (bsOffcanvas) bsOffcanvas.hide();
             });
         });
+
+        // Prevent body scroll when offcanvas is open
+        let scrollPosition = 0;
+        offcanvas.addEventListener('show.bs.offcanvas', () => {
+            scrollPosition = window.scrollY || window.pageYOffset;
+            document.body.style.overflow = 'hidden';
+            document.body.style.position = 'fixed';
+            document.body.style.top = `-${scrollPosition}px`;
+            document.body.style.width = '100%';
+        });
+        offcanvas.addEventListener('hide.bs.offcanvas', () => {
+            document.body.style.overflow = '';
+            document.body.style.position = '';
+            document.body.style.top = '';
+            document.body.style.width = '';
+            window.scrollTo(0, scrollPosition);
+        });
     }
+}
+
+/* --- RTL Direction Persistence --- */
+function initRTL() {
+    const rtlBtns = document.querySelectorAll('.rtl-toggle');
+    rtlBtns.forEach(btn => {
+        btn.removeAttribute('onclick');
+        btn.addEventListener('click', () => {
+            const current = document.documentElement.dir;
+            const target = current === 'rtl' ? 'ltr' : 'rtl';
+            document.documentElement.dir = target;
+            localStorage.setItem('dir', target);
+        });
+    });
 }
 
 /* --- Dynamic Cursor Blob --- */
