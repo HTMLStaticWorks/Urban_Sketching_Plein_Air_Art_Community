@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<link href="assets/images/favicon.svg" rel="icon" type="image/svg+xml"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Creative Inspiration | URBAN SKETCH</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+<link href="assets/css/style.css?v=3" rel="stylesheet"/>
+<link href="assets/css/rtl.css" rel="stylesheet"/>
+</head>
+<body class="bg-color">
+<div class="cursor-blob d-none d-xxl-block"></div>
+<!-- Fixed Top Navbar -->
+<nav class="navbar navbar-expand-xl">
+<div class="container-fluid px-4 px-md-5">
+<a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
+<i class="bi bi-palette brand-icon"></i>
+<span class="fw-800">URBAN <span class="text-accent">SKETCH</span></span>
+</a>
+<button class="navbar-toggler border-0 shadow-none" data-bs-target="#offcanvasNav" data-bs-toggle="offcanvas" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav mx-auto gap-1">
+<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li><li class="nav-item"><a class="nav-link active" href="home-2.html">Home 2</a></li>
+<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+<li class="nav-item"><a class="nav-link" href="services.html">Meetups</a></li>
+<li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+<li class="nav-item"><a class="nav-link" href="pricing.html">Supply Guide</a></li>
+<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+</ul>
+<div class="d-flex align-items-center gap-2">
+<div class="theme-toggle floating-icon-btn"><i class="bi bi-moon-stars-fill"></i></div>
+<div class="rtl-toggle floating-icon-btn" onclick="document.documentElement.dir=document.documentElement.dir==='rtl'?'ltr':'rtl'"><i class="bi bi-arrow-left-right"></i></div>
+<a class="btn btn-outline-dark px-4 py-2 d-none d-sm-inline-block" href="login.html">Login</a>
+<a class="btn btn-accent px-4 py-2" href="booking.html">Join Us</a>
+</div>
+</div>
+</div>
+</nav>
+<!-- Mobile Offcanvas -->
+<div class="offcanvas offcanvas-end rounded-start-4 shadow-lg border-0 bg-card" id="offcanvasNav" tabindex="-1">
+<div class="offcanvas-header p-4 position-relative d-flex justify-content-center border-bottom border-secondary border-opacity-10">
+<h5 class="offcanvas-title navbar-brand m-0">
+<i class="bi bi-palette brand-icon"></i>
+<span class="fw-800">URBAN <span class="text-accent">SKETCH</span></span>
+</h5>
+<button class="btn-close position-absolute end-0 me-4" data-bs-dismiss="offcanvas" type="button"></button>
+</div>
+<div class="offcanvas-body p-4">
+<ul class="navbar-nav gap-2">
+<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li><li class="nav-item"><a class="nav-link active" href="home-2.html">Home 2</a></li>
+<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+<li class="nav-item"><a class="nav-link" href="services.html">Meetups</a></li>
+<li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+<li class="nav-item"><a class="nav-link" href="pricing.html">Supply Guide</a></li>
+<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+</ul>
+<div class="mt-auto pt-4 border-top">
+<div class="d-flex align-items-center justify-content-center gap-3 mb-3">
+<div class="theme-toggle floating-icon-btn"><i class="bi bi-moon-stars-fill"></i></div>
+<div class="rtl-toggle floating-icon-btn" onclick="document.documentElement.dir=document.documentElement.dir==='rtl'?'ltr':'rtl'"><i class="bi bi-arrow-left-right"></i></div>
+</div>
+<div class="d-flex flex-column gap-3">
+<a class="btn btn-outline-dark w-100 py-3 rounded-4" href="login.html">Login</a>
+<a class="btn btn-accent w-100 py-3 rounded-4 fw-bold" href="booking.html">Join Us</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Hero V2: Centered Tactical Hero -->
+<section class="hero-v2" style="background-image: url('assets/images/urban_sketch_hero.png'); background-size: cover; background-position: center;">
+<div class="hero-v2-bg"></div>
+<div class="hero-v2-overlay" style="background: rgba(0,0,0,0.6);"></div>
+<div class="container position-relative z-2">
+<div class="row justify-content-center">
+<div class="col-lg-10">
+<div class="badge bg-accent px-4 py-2 mb-4 reveal-up shadow-lg active mx-auto d-inline-block">
+<span class="mission-pulse"></span> GLOBAL_SKETCHING_COMMUNITY
+                    </div>
+<h1 class="display-3 fw-900 text-white mb-4 reveal-up delay-1 active">CAPTURE THE WORLD <br/>ONE <span class="text-accent underline-dashed">SKETCH AT A TIME</span>.</h1>
+<p class="body-large text-white opacity-75 mb-80 reveal-up delay-2 mx-auto active" style="max-width: 800px;">Experience the joy of plein air painting with our global community. From local meetups to comprehensive supply guides, we offer everything you need to start your artistic journey.</p>
+<div class="d-flex flex-column flex-sm-row gap-3 justify-content-center reveal-up delay-3 active">
+<a class="btn btn-accent btn-lg px-5 py-3 rounded-pill fw-bold" href="booking.html">FIND A MEETUP</a>
+<a class="btn btn-outline-light border border-light border-opacity-50 btn-lg px-5 py-3 rounded-pill fw-bold" href="pricing.html">EXPLORE SUPPLIES</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Specialized Emergency Grid -->
+<section class="py-100 bg-color">
+<div class="container">
+<h2 class="h1 fw-bold mb-100 text-center">Community <span class="text-accent">Highlights</span></h2>
+<div class="row g-4 mb-4">
+<div class="col-lg-7">
+<div class="bento-card reveal-up shadow-lg h-100 d-flex flex-column">
+<i class="bi bi-people-fill text-accent display-2 mb-4 text-center text-lg-start d-block"></i>
+<h4 class="fw-bold mb-3 mt-4 text-center text-lg-start">Local Meetups</h4>
+<p class="text-muted pe-lg-5 mb-5 text-center text-lg-start">Whether you are a beginner or a seasoned artist, join local events to sketch outdoors, meet peers, and learn new techniques.</p>
+<div class="mt-auto pt-4 border-top border-secondary border-opacity-10">
+<div class="row g-4 justify-content-center">
+<div class="col-12 col-sm-6 col-md-3">
+<div class="text-center">
+<div class="h3 fw-800 text-main mb-1">50+</div>
+<div class="small text-muted opacity-75">Active Cities</div>
+</div>
+</div>
+<div class="col-12 col-sm-6 col-md-3 border-sm-start border-secondary border-opacity-10">
+<div class="text-center">
+<div class="h3 fw-800 text-main mb-1">Weekly</div>
+<div class="small text-muted opacity-75">Meetups</div>
+</div>
+</div>
+<div class="col-12 col-sm-6 col-md-3 border-md-start border-secondary border-opacity-10">
+<div class="text-center">
+<div class="h3 fw-800 text-main mb-1">100%</div>
+<div class="small text-muted opacity-75">Creative Freedom</div>
+</div>
+</div>
+<div class="col-12 col-sm-6 col-md-3 border-sm-start border-md-start border-secondary border-opacity-10">
+<div class="text-center">
+<div class="h3 fw-800 text-main mb-1">Pro</div>
+<div class="small text-muted opacity-75">Artists</div>
+</div>
+</div>
+</div>
+</div>
+<a class="btn btn-accent rounded-pill mt-5 w-fit-content px-5 mx-auto mx-lg-0" href="services.html">Join a Group</a>
+</div>
+</div>
+<div class="col-lg-5">
+<div class="bento-card reveal-up delay-1 shadow-sm border border-accent border-opacity-10 h-100 p-0 overflow-hidden">
+<div class="p-40 text-center text-lg-start">
+<h4 class="fw-bold mb-3">Live Sketching Map</h4>
+<p class="text-muted small mb-4">Discover popular urban sketching locations and active painting spots globally.</p>
+</div>
+<div class="position-relative overflow-hidden w-100" style="height: 250px; background: url('assets/images/urban_sketch_map.png') center/cover no-repeat;">
+<div class="mission-map-overlay h-100 w-100 d-flex align-items-center justify-content-center">
+<div class="pulse-container p-3 rounded-circle" style="background: rgba(254, 44, 85, 0.2); border: 2px solid var(--accent);">
+<div class="mission-pulse" style="width: 12px; height: 12px;"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row g-4 pt-4">
+<div class="col-md-4">
+<div class="bento-card reveal-up delay-2 shadow-sm">
+<i class="bi bi-brush text-accent mb-3 fs-3"></i>
+<h4 class="fw-bold small">Supply Guides</h4>
+<p class="text-muted small m-0">Curated lists of watercolor palettes and pens.</p>
+</div>
+</div>
+<div class="col-md-4">
+<div class="bento-card reveal-up delay-2 shadow-sm">
+<i class="bi bi-easel text-accent mb-3 fs-3"></i>
+<h4 class="fw-bold small">Skill Workshops</h4>
+<p class="text-muted small m-0">Learn perspective, value, and color theory outdoors.</p>
+</div>
+</div>
+<div class="col-md-4">
+<div class="bento-card reveal-up delay-2 shadow-sm">
+<i class="bi bi-images text-accent mb-3 fs-3"></i>
+<h4 class="fw-bold small">Gallery Showcases</h4>
+<p class="text-muted small m-0">Share your sketchbook with the world.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Command Mapping Matrix -->
+<section class="pt-0 pb-100 bg-color overflow-hidden">
+<div class="container-fluid px-4 px-md-5">
+<div class="split-hero-v2 reveal-up">
+<div class="split-content">
+<h2 class="h1 fw-800 mb-4">Global Artist <br/><span class="text-accent">Infrastructure</span></h2>
+<p class="text-muted mb-5 body-large">Connect with thousands of artists worldwide. Our platform provides the ultimate resource for urban sketching enthusiasts, from beginners to professionals.</p>
+<ul class="nav flex-column gap-3 mb-0">
+<li class="nav-item fw-500 d-flex align-items-start gap-3"><i class="bi bi-geo-alt-fill text-accent mt-1"></i> <span>Find Sketching Spots Worldwide</span></li>
+<li class="nav-item fw-500 d-flex align-items-start gap-3"><i class="bi bi-calendar-heart text-accent mt-1"></i> <span>Daily Prompt Challenges</span></li>
+<li class="nav-item fw-500 d-flex align-items-start gap-3"><i class="bi bi-chat-quote-fill text-accent mt-1"></i> <span>Supportive Art Community</span></li>
+</ul>
+</div>
+<div class="split-image d-none d-xxl-block" style="background: url('assets/images/urban_sketch_hero.png') center/cover no-repeat;"></div>
+</div>
+</div>
+</section>
+<!-- Section 3: Professional Protocol Flow -->
+<section class="pt-80 pb-80">
+<div class="container-fluid px-4 px-md-5">
+<h2 class="h1 fw-bold mb-100 text-center">Your Sketching <span class="text-accent">Journey</span></h2>
+<div class="row align-items-center g-5">
+<div class="col-lg-6">
+<div class="protocol-item reveal-left">
+<h4 class="fw-bold mb-2">01. Find a Location</h4>
+<p class="text-muted m-0">Check our interactive map for upcoming outdoor sessions near you or popular sketching spots.</p>
+</div>
+<div class="protocol-item reveal-left delay-1">
+<h4 class="fw-bold mb-2">02. Pack Your Supplies</h4>
+<p class="text-muted m-0">Use our beginner-friendly gear list to pack light and efficiently with just the essentials.</p>
+</div>
+<div class="protocol-item reveal-left delay-2">
+<h4 class="fw-bold mb-2">03. Sketch and Share</h4>
+<p class="text-muted m-0">Spend hours drawing the cityscape and share your results online with our supportive members.</p>
+</div>
+</div>
+<div class="col-lg-6 reveal-right">
+<div class="image-reveal-wrapper rounded-40 shadow-2xl p-0 overflow-hidden">
+<img alt="Sketching Journey" class="img-fluid w-100 object-fit-cover" src="assets/images/home2_journey.png" style="min-height: 400px;"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Modular Laboratory Bento -->
+<section class="py-100 bg-color">
+<div class="container">
+<h2 class="h1 fw-bold mb-100 text-center">Creative <span class="text-accent">Workspaces</span></h2>
+<div class="tech-bento-grid">
+<div class="bento-card tech-bento-main reveal-up shadow-sm overflow-hidden p-0 position-relative">
+<img alt="Plein Air Setup" class="img-fluid w-100 object-fit-cover" src="assets/images/home2_setup.png" style="height: 250px; border-radius: 32px 32px 0 0;"/>
+<div class="p-40">
+<h3 class="fw-bold mb-3">The Plein Air Setup</h3>
+<p class="text-muted">A compact powerhouse containing travel palettes, water brushes, and sketchbooks for painting outdoors.</p>
+<div class="d-flex gap-3 mt-4">
+<div class="badge rounded-pill bg-accent px-3 py-2">CURATED GEAR</div>
+<div class="badge rounded-pill bg-color border px-3 py-2 text-main">BEGINNER FRIENDLY</div>
+</div>
+</div>
+</div>
+<div class="bento-card reveal-up delay-1 shadow-sm">
+<i class="bi bi-ipad text-accent display-6 mb-3"></i>
+<h4 class="fw-bold">Digital Sketching</h4>
+<p class="text-muted small mb-0">Explore hybrid workflows with iPad and Procreate tutorials for urban environments.</p>
+</div>
+<div class="bento-card reveal-up delay-2 shadow-sm">
+<i class="bi bi-bag-heart text-accent display-6 mb-3"></i>
+<h4 class="fw-bold">Gear Recommendations</h4>
+<p class="text-muted small mb-0">100% curated gear for the on-the-go artist, reviewed by professionals.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- UNIQUE SECTION: The Urban Philosophy (Overlap Glass Layout) -->
+<section class="py-120 position-relative overflow-hidden">
+<div class="position-absolute top-0 start-0 w-100 h-100 bg-accent opacity-5"></div>
+<div class="container position-relative z-2">
+<div class="row align-items-center g-5">
+<div class="col-lg-6 reveal-left position-relative z-1">
+<div class="position-relative">
+<img alt="Philosophy" class="img-fluid rounded-40 shadow-2xl" src="assets/images/gallery_art8.png" style="height: 550px; width: 100%; object-fit: cover;" />
+<div class="position-absolute top-0 start-0 w-100 h-100 rounded-40 bg-dark bg-opacity-10"></div>
+<div class="position-absolute bottom-0 end-0 p-4 anim-float-rotate d-none d-md-block">
+<div class="bg-card shadow-lg p-4 rounded-circle d-flex align-items-center justify-content-center" style="width: 120px; height: 120px;">
+<i class="bi bi-quote text-accent display-4"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-6 reveal-right position-relative z-3">
+<div class="glass-card p-5 p-lg-6 rounded-40 shadow-sm position-relative border border-secondary border-opacity-10 text-center text-lg-start" style="background: var(--nav-bg);">
+<div class="badge bg-accent text-white px-3 py-2 rounded-pill mb-4 fw-bold shadow-sm d-inline-block">OUR PHILOSOPHY</div>
+<h2 class="display-5 fw-900 mb-4">Embrace the <span class="text-accent">Imperfections</span></h2>
+<p class="body-large text-muted mb-4">Urban sketching isn't about creating a perfect studio masterpiece. It's about capturing a fleeting moment in time, dealing with changing weather, moving subjects, and the raw energy of the street.</p>
+<ul class="list-unstyled d-inline-flex flex-column text-start mx-auto mx-lg-0 mb-5">
+<li class="d-flex align-items-center gap-3 mb-3">
+<div class="bg-accent bg-opacity-10 p-2 rounded-circle"><i class="bi bi-check2-all text-accent fs-5"></i></div>
+<span class="fw-bold">No Erasers Allowed</span>
+</li>
+<li class="d-flex align-items-center gap-3 mb-3">
+<div class="bg-accent bg-opacity-10 p-2 rounded-circle"><i class="bi bi-check2-all text-accent fs-5"></i></div>
+<span class="fw-bold">Tell the Story of Your Surroundings</span>
+</li>
+<li class="d-flex align-items-center gap-3">
+<div class="bg-accent bg-opacity-10 p-2 rounded-circle"><i class="bi bi-check2-all text-accent fs-5"></i></div>
+<span class="fw-bold">Share Without Judgment</span>
+</li>
+</ul>
+<a class="btn btn-outline-dark rounded-pill px-5 py-3 fw-bold" href="about.html">Read Our Manifesto</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: The Command Access CTA -->
+<section class="py-100">
+<div class="container-fluid px-4 px-md-5">
+<div class="showcase-v2 reveal-up" style="background-image: url('assets/images/urban_sketch_map.png'); background-size: cover; background-position: center;">
+<div class="p-5 p-lg-8 position-relative z-1 text-center w-100 h-100 d-flex flex-column align-items-center justify-content-center" style="background: rgba(0,0,0,0.5);">
+<h2 class="display-3 fw-800 text-white mb-4">Ready to Start <br/><span class="text-accent">Sketching?</span></h2>
+<p class="text-white opacity-75 body-large mb-5 text-center px-3" style="max-width: 600px;">Experience the joy of plein air painting. Your artistic journey begins here.</p>
+<div class="d-flex flex-column flex-sm-row gap-3 align-items-center justify-content-center">
+<a class="btn btn-accent rounded-pill px-4 px-md-5" href="register.html">Join the Network</a>
+<a class="btn btn-outline-light rounded-pill border border-light border-opacity-50 px-4 px-md-5" href="gallery.html">Explore Gallery</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="pt-80">
+<div class="container-fluid px-4 px-md-5">
+<div class="row g-4 mb-80">
+<div class="col-lg-3 col-12 text-center text-md-start">
+<a class="navbar-brand text-white footer-logo mb-16 d-flex align-items-center gap-3 justify-content-center justify-content-md-start" href="index.html">
+<i class="bi bi-palette brand-icon"></i>
+<span class="fw-800">URBAN <span class="text-accent">SKETCH</span></span>
+</a>
+<p class="opacity-75">Connects urban sketchers with local meetup event listings, member gallery showcases, and a beginner supply guide.</p>
+<div class="d-flex justify-content-center justify-content-md-start gap-3 mt-4">
+<a class="text-white fs-4" href="#"><i class="bi bi-facebook"></i></a>
+<a class="text-white fs-4" href="#"><i class="bi bi-twitter-x"></i></a>
+<a class="text-white fs-4" href="#"><i class="bi bi-instagram"></i></a>
+<a class="text-white fs-4" href="#"><i class="bi bi-linkedin"></i></a>
+</div>
+</div>
+<div class="col-lg-2 col-12">
+<h5 class="footer-heading">Quick Links</h5>
+<ul class="nav flex-column">
+<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="services.html">Meetups</a></li>
+<li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div class="col-lg-3 col-12">
+<h5 class="footer-heading">Resources</h5>
+<ul class="nav flex-column">
+<li class="nav-item"><a class="nav-link" href="pricing.html">Supply Guide</a></li>
+<li class="nav-item"><a class="nav-link" href="gallery.html">Member Gallery</a></li>
+<li class="nav-item"><a class="nav-link" href="#">Sketching Tips</a></li>
+<li class="nav-item"><a class="nav-link" href="#">Community Rules</a></li>
+</ul>
+</div>
+<div class="col-lg-4 col-12">
+<h5 class="footer-heading">Newsletter</h5>
+<p class="opacity-75 text-center text-md-start">Subscribe for sketching tips and meetup updates.</p>
+<form class="mt-4">
+<div class="input-group">
+<input class="form-control rounded-pill rounded-end-0 bg-transparent border-secondary border-opacity-25 text-white" placeholder="Email Address" type="email"/>
+<button class="btn btn-accent rounded-pill rounded-start-0" type="button"><i class="bi bi-send"></i></button>
+</div>
+</form>
+</div>
+</div>
+<hr class="opacity-25"/>
+<div class="text-center pb-3">
+<p class="opacity-50 mb-0">© 2026 URBAN SKETCH. All Rights Reserved.</p>
+</div>
+</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

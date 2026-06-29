@@ -1,0 +1,102 @@
+/* RTL Styles for Urban Sketching */
+html[dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Adjust Offcanvas for RTL */
+html[dir="rtl"] .offcanvas-end {
+    right: auto;
+    left: 0;
+    transform: translateX(-100%);
+}
+
+html[dir="rtl"] .offcanvas.show {
+    transform: none;
+}
+
+/* Navbar adjustments */
+html[dir="rtl"] .ms-auto {
+    margin-right: auto !important;
+    margin-left: 0 !important;
+}
+
+html[dir="rtl"] .me-auto {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+}
+
+/* Adjust padding/margins for specific alignments */
+html[dir="rtl"] .pe-lg-5 {
+    padding-left: 3rem !important;
+    padding-right: 0 !important;
+}
+
+html[dir="rtl"] .ps-lg-4 {
+    padding-right: 1.5rem !important;
+    padding-left: 0 !important;
+}
+
+html[dir="rtl"] .text-lg-start,
+html[dir="rtl"] .text-md-start {
+    text-align: right !important;
+}
+
+html[dir="rtl"] .text-lg-end,
+html[dir="rtl"] .text-md-end {
+    text-align: left !important;
+}
+
+html[dir="rtl"] .justify-content-md-start {
+    justify-content: flex-end !important;
+}
+
+html[dir="rtl"] .justify-content-md-end {
+    justify-content: flex-start !important;
+}
+
+/* Animations for RTL */
+html[dir="rtl"] .reveal-left {
+    transform: translateX(80px);
+}
+html[dir="rtl"] .reveal-right {
+    transform: translateX(-80px);
+}
+
+html[dir="rtl"] .border-md-start {
+    border-left: none !important;
+    border-right: 1px solid var(--border-color) !important;
+}
+
+/* Absolute/Fixed Positioning Overrides */
+html[dir="rtl"] .end-0 {
+    right: auto !important;
+    left: 0 !important;
+}
+
+html[dir="rtl"] .start-0 {
+    left: auto !important;
+    right: 0 !important;
+}
+
+/* Margin Overrides */
+html[dir="rtl"] .me-4 {
+    margin-right: 0 !important;
+    margin-left: 1.5rem !important;
+}
+
+html[dir="rtl"] .ms-3 {
+    margin-left: 0 !important;
+    margin-right: 1rem !important;
+}
+
+/* Padding Overrides */
+html[dir="rtl"] .pe-5 {
+    padding-right: 0 !important;
+    padding-left: 3rem !important;
+}
+
+html[dir="rtl"] .pe-3 {
+    padding-right: 0 !important;
+    padding-left: 1rem !important;
+}

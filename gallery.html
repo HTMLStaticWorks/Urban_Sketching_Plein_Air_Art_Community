@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<link href="assets/images/favicon.svg" rel="icon" type="image/svg+xml"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Member Gallery | URBAN SKETCH</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+<link href="assets/css/style.css?v=3" rel="stylesheet"/>
+<link href="assets/css/rtl.css" rel="stylesheet"/>
+</head>
+<body class="bg-color">
+<div class="cursor-blob d-none d-xxl-block"></div>
+<!-- Fixed Top Navbar -->
+<nav class="navbar navbar-expand-xl">
+<div class="container-fluid px-4 px-md-5">
+<a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
+<i class="bi bi-palette brand-icon"></i>
+<span class="fw-800">URBAN <span class="text-accent">SKETCH</span></span>
+</a>
+<button class="navbar-toggler border-0 shadow-none" data-bs-target="#offcanvasNav" data-bs-toggle="offcanvas" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav mx-auto gap-1">
+<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li><li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+<li class="nav-item"><a class="nav-link" href="services.html">Meetups</a></li>
+<li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+<li class="nav-item"><a class="nav-link" href="pricing.html">Supply Guide</a></li>
+<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+</ul>
+<div class="d-flex align-items-center gap-2">
+<div class="theme-toggle floating-icon-btn"><i class="bi bi-moon-stars-fill"></i></div>
+<div class="rtl-toggle floating-icon-btn" onclick="document.documentElement.dir=document.documentElement.dir==='rtl'?'ltr':'rtl'"><i class="bi bi-arrow-left-right"></i></div>
+<a class="btn btn-outline-dark px-4 py-2 d-none d-sm-inline-block" href="login.html">Login</a>
+<a class="btn btn-accent px-4 py-2" href="booking.html">Join Us</a>
+</div>
+</div>
+</div>
+</nav>
+<!-- Mobile Offcanvas -->
+<div class="offcanvas offcanvas-end rounded-start-4 shadow-lg border-0 bg-card" id="offcanvasNav" tabindex="-1">
+<div class="offcanvas-header p-4 position-relative d-flex justify-content-center border-bottom border-secondary border-opacity-10">
+<h5 class="offcanvas-title navbar-brand m-0">
+<i class="bi bi-palette brand-icon"></i>
+<span class="fw-800">URBAN <span class="text-accent">SKETCH</span></span>
+</h5>
+<button class="btn-close position-absolute end-0 me-4" data-bs-dismiss="offcanvas" type="button"></button>
+</div>
+<div class="offcanvas-body p-4">
+<ul class="navbar-nav gap-2">
+<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li><li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+<li class="nav-item"><a class="nav-link" href="services.html">Meetups</a></li>
+<li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+<li class="nav-item"><a class="nav-link" href="pricing.html">Supply Guide</a></li>
+<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+</ul>
+<div class="mt-auto pt-4 border-top">
+<div class="d-flex align-items-center justify-content-center gap-3 mb-3">
+<div class="theme-toggle floating-icon-btn"><i class="bi bi-moon-stars-fill"></i></div>
+<div class="rtl-toggle floating-icon-btn" onclick="document.documentElement.dir=document.documentElement.dir==='rtl'?'ltr':'rtl'"><i class="bi bi-arrow-left-right"></i></div>
+</div>
+<div class="d-flex flex-column gap-3">
+<a class="btn btn-outline-dark w-100 py-3 rounded-4" href="login.html">Login</a>
+<a class="btn btn-accent w-100 py-3 rounded-4 fw-bold" href="booking.html">Join Us</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Gallery Context -->
+<main class="py-100">
+<div class="container-fluid px-4 px-md-5">
+<!-- Cinematic Header -->
+<div class="text-center mb-100 reveal-up active">
+<div class="badge bg-accent bg-opacity-10 text-accent mb-3 px-3 py-1 rounded-pill fw-bold">PORTFOLIO: MEMBER_SHOWCASE</div>
+<h1 class="display-3 fw-800 mb-4">Member <span class="text-accent">Gallery</span></h1>
+<p class="body-large text-muted mx-auto" style="max-width: 700px;">A visual record of plein air and urban sketching adventures. Every artwork represents a moment captured in real-time by our global community.</p>
+</div>
+<!-- Filter System -->
+<div class="d-flex flex-wrap justify-content-center gap-3 mb-120 reveal-up active">
+<button class="btn-tactical-filter active">ALL_ART</button>
+<button class="btn-tactical-filter">WATERCOLOR</button>
+<button class="btn-tactical-filter">INK_WASH</button>
+<button class="btn-tactical-filter">PENCIL_SKETCH</button>
+<button class="btn-tactical-filter">ARCHITECTURE</button>
+</div>
+<!-- Dynamic Mission Grid -->
+<div class="mission-gallery-grid">
+<div class="mission-card reveal-up active">
+<div class="mission-image-wrapper">
+<img alt="Artwork 01" src="assets/images/gallery_art1.png"/>
+<div class="mission-hud">
+<div class="hud-top">
+<span class="hud-id">ART-ID: 7792-0</span>
+<span class="hud-status">EXHIBITED</span>
+</div>
+<div class="hud-bottom">
+<h4 class="fw-bold m-0 text-white">Parisian Cafe</h4>
+<p class="small text-white opacity-75 mb-0">Medium: Watercolor | Artist: Elena R.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mission-card reveal-up active">
+<div class="mission-image-wrapper">
+<img alt="Artwork 02" src="assets/images/gallery_art2.png"/>
+<div class="mission-hud">
+<div class="hud-top">
+<span class="hud-id">ART-ID: 7792-1</span>
+<span class="hud-status">EXHIBITED</span>
+</div>
+<div class="hud-bottom">
+<h4 class="fw-bold m-0 text-white">Gothic Cathedral</h4>
+<p class="small text-white opacity-75 mb-0">Medium: Ink &amp; Watercolor | Artist: Marcus T.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mission-card reveal-up active">
+<div class="mission-image-wrapper">
+<img alt="Artwork 03" src="assets/images/gallery_art3.png"/>
+<div class="mission-hud">
+<div class="hud-top">
+<span class="hud-id">ART-ID: 7792-2</span>
+<span class="hud-status">EXHIBITED</span>
+</div>
+<div class="hud-bottom">
+<h4 class="fw-bold m-0 text-white">City Market</h4>
+<p class="small text-white opacity-75 mb-0">Medium: Vibrant Watercolor | Artist: Sarah L.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mission-card reveal-up active">
+<div class="mission-image-wrapper">
+<img alt="Artwork 04" src="assets/images/gallery_art4.png"/>
+<div class="mission-hud">
+<div class="hud-top">
+<span class="hud-id">ART-ID: 7792-3</span>
+<span class="hud-status">EXHIBITED</span>
+</div>
+<div class="hud-bottom">
+<h4 class="fw-bold m-0 text-white">Modern Skyscraper</h4>
+<p class="small text-white opacity-75 mb-0">Medium: Black Ink | Artist: David K.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mission-card reveal-up active">
+<div class="mission-image-wrapper">
+<img alt="Artwork 5" src="assets/images/gallery_art5.png"/>
+<div class="mission-hud">
+<div class="hud-top">
+<span class="hud-id">ART-ID: 7792-5</span>
+<span class="hud-status">EXHIBITED</span>
+</div>
+<div class="hud-bottom">
+<h4 class="fw-bold m-0 text-white">Historic Avenue</h4>
+<p class="small text-white opacity-75 mb-0">Medium: Photography | Artist: Marcus T.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mission-card reveal-up active">
+<div class="mission-image-wrapper">
+<img alt="Artwork 6" src="assets/images/gallery_art6.png"/>
+<div class="mission-hud">
+<div class="hud-top">
+<span class="hud-id">ART-ID: 7792-6</span>
+<span class="hud-status">EXHIBITED</span>
+</div>
+<div class="hud-bottom">
+<h4 class="fw-bold m-0 text-white">Riverside Path</h4>
+<p class="small text-white opacity-75 mb-0">Medium: Real Life | Artist: Sarah L.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mission-card reveal-up active">
+<div class="mission-image-wrapper">
+<img alt="Artwork 7" src="assets/images/gallery_art7.png"/>
+<div class="mission-hud">
+<div class="hud-top">
+<span class="hud-id">ART-ID: 7792-7</span>
+<span class="hud-status">EXHIBITED</span>
+</div>
+<div class="hud-bottom">
+<h4 class="fw-bold m-0 text-white">Sunset Boulevard</h4>
+<p class="small text-white opacity-75 mb-0">Medium: Photography | Artist: David K.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mission-card reveal-up active">
+<div class="mission-image-wrapper">
+<img alt="Artwork 8" src="assets/images/gallery_art8.png"/>
+<div class="mission-hud">
+<div class="hud-top">
+<span class="hud-id">ART-ID: 7792-8</span>
+<span class="hud-status">EXHIBITED</span>
+</div>
+<div class="hud-bottom">
+<h4 class="fw-bold m-0 text-white">Morning Light</h4>
+<p class="small text-white opacity-75 mb-0">Medium: Photography | Artist: Elena R.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mission-card reveal-up active">
+<div class="mission-image-wrapper">
+<img alt="Artwork 9" src="assets/images/gallery_art9.png"/>
+<div class="mission-hud">
+<div class="hud-top">
+<span class="hud-id">ART-ID: 7792-9</span>
+<span class="hud-status">EXHIBITED</span>
+</div>
+<div class="hud-bottom">
+<h4 class="fw-bold m-0 text-white">Old Town Square</h4>
+<p class="small text-white opacity-75 mb-0">Medium: Real Life | Artist: Marcus T.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mission-card reveal-up active">
+<div class="mission-image-wrapper">
+<img alt="Artwork 10" src="assets/images/gallery_art10.png"/>
+<div class="mission-hud">
+<div class="hud-top">
+<span class="hud-id">ART-ID: 7792-10</span>
+<span class="hud-status">EXHIBITED</span>
+</div>
+<div class="hud-bottom">
+<h4 class="fw-bold m-0 text-white">Mountain View</h4>
+<p class="small text-white opacity-75 mb-0">Medium: Photography | Artist: Sarah L.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mission-card reveal-up active">
+<div class="mission-image-wrapper">
+<img alt="Artwork 11" src="assets/images/gallery_art11.png"/>
+<div class="mission-hud">
+<div class="hud-top">
+<span class="hud-id">ART-ID: 7792-11</span>
+<span class="hud-status">EXHIBITED</span>
+</div>
+<div class="hud-bottom">
+<h4 class="fw-bold m-0 text-white">City Park</h4>
+<p class="small text-white opacity-75 mb-0">Medium: Real Life | Artist: David K.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mission-card reveal-up active">
+<div class="mission-image-wrapper">
+<img alt="Artwork 12" src="assets/images/gallery_art12.png"/>
+<div class="mission-hud">
+<div class="hud-top">
+<span class="hud-id">ART-ID: 7792-12</span>
+<span class="hud-status">EXHIBITED</span>
+</div>
+<div class="hud-bottom">
+<h4 class="fw-bold m-0 text-white">Coastal Walk</h4>
+<p class="small text-white opacity-75 mb-0">Medium: Photography | Artist: Elena R.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Section: Operational Metrix -->
+<section class="py-120 overflow-hidden bg-color border-top border-secondary border-opacity-10">
+<div class="container">
+<div class="text-center mb-100 reveal-up">
+<div class="badge bg-accent bg-opacity-10 text-main mb-3 px-3 py-1 rounded-pill fw-bold">LIVE_COMMUNITY_STATS</div>
+<h2 class="display-4 fw-800">Community <span class="text-accent">Impact</span></h2>
+</div>
+<div class="row g-4 justify-content-center">
+<div class="col-md-6 col-xl-3">
+<div class="p-4 rounded-40 bg-card border border-light shadow-sm transition h-100 text-center hover-lift reveal-up">
+<div class="icon-box bg-accent bg-opacity-10 text-accent rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 80px; height: 80px;">
+<i class="bi bi-people-fill display-5 mb-0"></i>
+</div>
+<div class="h2 fw-900 text-main mb-2">15,400+</div>
+<h6 class="fw-bold text-accent mb-3">Global Sketchers</h6>
+<p class="small text-muted mb-0 mx-auto" style="max-width: 250px;">Active members participating in weekly plein air groups around the world.</p>
+</div>
+</div>
+<div class="col-md-6 col-xl-3">
+<div class="p-4 rounded-40 bg-card border border-light shadow-sm transition h-100 text-center hover-lift reveal-up delay-1">
+<div class="icon-box bg-accent bg-opacity-10 text-accent rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 80px; height: 80px;">
+<i class="bi bi-image display-5 mb-0"></i>
+</div>
+<div class="h2 fw-900 text-main mb-2">82K</div>
+<h6 class="fw-bold text-accent mb-3">Artworks Shared</h6>
+<p class="small text-muted mb-0 mx-auto" style="max-width: 250px;">Total number of urban sketches uploaded and critiqued this quarter.</p>
+</div>
+</div>
+<div class="col-md-6 col-xl-3">
+<div class="p-4 rounded-40 bg-card border border-light shadow-sm transition h-100 text-center hover-lift reveal-up delay-2">
+<div class="icon-box bg-accent bg-opacity-10 text-accent rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 80px; height: 80px;">
+<i class="bi bi-brush-fill display-5 mb-0"></i>
+</div>
+<div class="h2 fw-900 text-main mb-2">240</div>
+<h6 class="fw-bold text-accent mb-3">Masterclasses</h6>
+<p class="small text-muted mb-0 mx-auto" style="max-width: 250px;">Intensive workshops hosted by our featured pro-artists globally.</p>
+</div>
+</div>
+<div class="col-md-6 col-xl-3">
+<div class="p-4 rounded-40 bg-card border border-light shadow-sm transition h-100 text-center hover-lift reveal-up delay-3">
+<div class="icon-box bg-accent bg-opacity-10 text-accent rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 80px; height: 80px;">
+<i class="bi bi-calendar-event-fill display-5 mb-0"></i>
+</div>
+<div class="h2 fw-900 text-main mb-2">350+</div>
+<h6 class="fw-bold text-accent mb-3">Active Meetups</h6>
+<p class="small text-muted mb-0 mx-auto" style="max-width: 250px;">Ongoing local groups consistently meeting for weekly sketch walks.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Mission Briefing Call to Action -->
+<section class="py-120 bg-color border-top border-secondary border-opacity-10 text-center">
+<div class="container">
+<div class="reveal-up">
+<i class="bi bi-palette display-1 text-accent mb-4"></i>
+<h2 class="display-4 fw-800 mb-4">Ready to Share Your <span class="text-accent">Art?</span></h2>
+<p class="body-large text-muted mb-5 mx-auto" style="max-width: 600px;">Join the community to upload your sketches, receive feedback, and find local drawing companions.</p>
+<div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+<a class="btn btn-accent btn-tactical-cta rounded-pill" href="booking.html">Upload Sketch</a>
+<a class="btn btn-outline-dark btn-tactical-cta rounded-pill" href="services.html">Find a Meetup</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="pt-80">
+<div class="container-fluid px-4 px-md-5">
+<div class="row g-4 mb-80">
+<div class="col-lg-3 col-12 text-center text-md-start">
+<a class="navbar-brand text-white footer-logo mb-16 d-flex align-items-center gap-3 justify-content-center justify-content-md-start" href="index.html">
+<i class="bi bi-palette brand-icon"></i>
+<span class="fw-800">URBAN <span class="text-accent">SKETCH</span></span>
+</a>
+<p class="opacity-75">Connects urban sketchers with local meetup event listings, member gallery showcases, and a beginner supply guide.</p>
+<div class="d-flex justify-content-center justify-content-md-start gap-3 mt-4">
+<a class="text-white fs-4" href="#"><i class="bi bi-facebook"></i></a>
+<a class="text-white fs-4" href="#"><i class="bi bi-twitter-x"></i></a>
+<a class="text-white fs-4" href="#"><i class="bi bi-instagram"></i></a>
+<a class="text-white fs-4" href="#"><i class="bi bi-linkedin"></i></a>
+</div>
+</div>
+<div class="col-lg-2 col-12">
+<h5 class="footer-heading">Quick Links</h5>
+<ul class="nav flex-column">
+<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="services.html">Meetups</a></li>
+<li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div class="col-lg-3 col-12">
+<h5 class="footer-heading">Resources</h5>
+<ul class="nav flex-column">
+<li class="nav-item"><a class="nav-link" href="pricing.html">Supply Guide</a></li>
+<li class="nav-item"><a class="nav-link" href="gallery.html">Member Gallery</a></li>
+<li class="nav-item"><a class="nav-link" href="#">Sketching Tips</a></li>
+<li class="nav-item"><a class="nav-link" href="#">Community Rules</a></li>
+</ul>
+</div>
+<div class="col-lg-4 col-12">
+<h5 class="footer-heading">Newsletter</h5>
+<p class="opacity-75 text-center text-md-start">Subscribe for sketching tips and meetup updates.</p>
+<form class="mt-4">
+<div class="input-group">
+<input class="form-control rounded-pill rounded-end-0 bg-transparent border-secondary border-opacity-25 text-white" placeholder="Email Address" type="email"/>
+<button class="btn btn-accent rounded-pill rounded-start-0" type="button"><i class="bi bi-send"></i></button>
+</div>
+</form>
+</div>
+</div>
+<hr class="opacity-25"/>
+<div class="text-center pb-3">
+<p class="opacity-50 mb-0">© 2026 URBAN SKETCH. All Rights Reserved.</p>
+</div>
+</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
